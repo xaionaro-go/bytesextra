@@ -1,0 +1,10 @@
+//go:build !amd64
+// +build !amd64
+
+package bytesextra
+
+// IsZeroFilled returns true if b consists of zeros only.
+//go:nosplit
+func IsZeroFilled(b []byte) bool {
+	return isZeroFilledSimple(b)
+}
